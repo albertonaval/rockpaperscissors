@@ -23,21 +23,59 @@ function playRound(playerSelection, computerSelection) {
     return 'Play another round';
   }
 }
+console.log(playRound(playerSelection, computerSelection));
+
+// SWITCH METHOD.
+// let computerScore = 0;
+// let playerScore = 0;
+// let round = playerSelection + computerSelection;
+
+// function playRound(playerSelection, computerSelection) {
+//   switch (round) {
+//     case 'Paper - Rock':
+//       playerSelection = 'Paper';
+//       computerSelection = 'Rock';
+//       playerScore++ + 1;
+//       return 'You Win!! Paper beats Rock';
+//       break;
+//     case 'Paper - Paper':
+//       playerSelection = 'Paper';
+//       computerSelection = 'Paper';
+//       return 'You and the computer are tie !! Play again for more fun';
+//       break;
+//     case 'Paper - Scissor':
+//       playerSelection = 'Paper';
+//       computerSelection = 'Scissors';
+//       computerScore++ + 1;
+//       return 'You Lose !! Scissors beats Paper';
+//       break;
+//   }
+// }
+// console.log(playRound(playerSelection, computerSelection));
+
+
+
+// Write a NEW function called game(). Call the playRound function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
+
+function game() {
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+    return 'You win !! Paper beats Rock';
+  } else if (playerSelection === 'Paper' && computerSelection === 'Paper') {
+    return 'You and the computer are tie !! Play again for more fun';
+  } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
+    return 'You Lose !! Scissors beats Paper';
+  } else {
+    return 'Play another round';
+  }
+  }
+  return playRound;
+}
+let playRound = game();
 
 console.log(playRound(playerSelection, computerSelection));
 
 
-// Write a NEW function called game(). Call the playRound function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
-// let computerScore = 0;
-// let playerScore = 0;
-
-// function game() {
-//   playRound();
-//   for (let i = 0; i < 5; i++) {
-
-//   }
-
-// }
 
 
 
