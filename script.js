@@ -39,9 +39,20 @@ function playRound(playerSelection, computerSelection) {
 
 for (let i = 0; i < 0; i++) {
 let computerScore = 0;
-let playerScore = 0;
-}
-  function gameIsOver() {
-    playerScore === '5' || computerScore === '5';
+  let playerScore = 0;
+  if (playerSelection == 'win') {
+    playerScore++;
   }
+  if (computerSelection == 'win') {
+    computerScore++;
+  }
+  else if (playerScore === '5' || computerScore === '5') {
+    gameIsOver;
+  }
+}
+
+
+// UI
+
+
 
